@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <style>
+        /* Google Fonts üzerinden Roboto fontunu içe aktarma ve temel stil ayarları */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+        /* Tüm HTML elemanları için genel stil ayarları */
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Sayfa gövdesi için arka plan rengi ve diğer stil ayarları */
+        body {
+            background-color: #393E46; 
+        }
+
+        /* Banner bölümü için stil ayarları */
+        .banner {
+            overflow: hidden;
+        }
+
+        .banner .content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+
+        /* Üst navigasyon çubuğu için stil ayarları */
+        .banner .content .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            height: 11vh;
+            background-color: rgb(27, 38, 44, 0.5);
+            margin: auto;
+            align-items: center;
+        }
+
+        /* Logo bölümü için stil ayarları */
+        .logo {
+            width: 30%;
+            text-align: center;
+            margin: auto;
+        }
+
+        .logo h1 {
+            font-size: 35px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        .logo h1 span {
+            color: rgb(179, 19, 18);
+        }
+
+        /* Navigasyon öğeleri için stil ayarları */
+        .nav-items {
+            width: 45%;
+            text-align: center;
+            margin: auto;
+        }
+
+        .nav-items ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .nav-items ul li {
+            list-style: none;
+            display: inline-block;
+            height: 20px;
+            width: auto;
+            padding: 12px 20px;
+        }
+
+        /* Navigasyon bağlantıları için stil ayarları */
+        ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: normal;
+            font-size: 15px;
+        }
+
+        /* Navigasyon bağlantılarının hover ve aktif durumları için stil ayarları */
+        li.active,
+        a:hover {
+            color: rgb(187, 225, 250);
+        }
+
+        ul #sign {
+            background-color: rgb(179, 19, 18);
+        }
+
+        ul #sign:hover {
+            background: transparent;
+            border: 1.2px solid rgb(50, 130, 184);
+            padding: 11px 19px;
+        }
+
+        /* Ana içerik bölümü için stil ayarları */
+        .main {
+            text-align: center;
+            margin-top: 5vh;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .main h3 {
+            font-size: 20px;
+        }
+
+        .main h1 {
+            font-size: 80px;
+            padding: 6px 0px;
+        }
+
+        .main h1 span {
+            color: rgb(170, 28, 28);
+        }
+
+        .main p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* İletişim formu için buton stil ayarları */
+        .main button {
+            padding: 15px 20px;
+            background: rgb(179, 19, 18);
+            border: none;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .main button:hover {
+            background: transparent;
+            border: 1.5px solid rgb(252, 50, 0);
+            color: rgb(252, 50, 0);
+            text-decoration: underline;
+        }
+
+        /* İletişim formu stil ayarları */
+        .contact-form {
+            max-width: 400px; 
+            margin: 50px auto; 
+            text-align: left;
+            background-color: #393E46;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+
+        /* İletişim formu etiketleri için stil ayarları */
+        .contact-form label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: white; 
+        }
+
+        /* İletişim formu giriş alanları için stil ayarları */
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* İletişim formu gönder butonu için stil ayarları */
+        .contact-form button {
+            background-color: rgb(179, 19, 18);
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        /* İletişim formu gönder butonunun hover durumu için stil ayarları */
+        .contact-form button:hover {
+            background: transparent;
+            border: 1.5px solid rgb(252, 50, 0);
+            color: rgb(252, 50, 0);
+        }
+
+        /* Logo için link stil ayarları */
+        .logo a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Logo linkinin hover durumu için stil ayarları */
+        .logo a:hover {
+            text-decoration: none;
+        }
+
+        /* Banner video için stil ayarları */
+        .banner video{
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Banner alanı, arka plan videosu içerir -->
+    <div class="banner">
+        <video id="videobg" autoplay muted loop style="background-color: rgba(22, 22, 26, 0.658);">
+            <source src="vid.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <!-- Navigasyon çubuğu, sayfalar arası geçiş sağlar -->
+            <div class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>YBS<span>GYM</span></h1>
+                    </a>
+                </div>
+                <div class="nav-items">
+                    <ul>
+                        <li><a href="index.html">ANA SAYFA</a></li>
+                        <li><a href="bmi.html">BMİ HESAPLA</a></li>
+                        <li><a href="Hakkımızda.html">HAKKIMIZDA</a></li>
+                        <li><a href="iletişim.html">İLETİŞİM</a></li>
+                        <li><a href="fiyat.html">ÜCRETLER</a></li>
+                        <li id="sign"><a href="kayit.html">KAYIT OL</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ana içerik bölümü, iletişim bilgileri ve formu içerir -->
+    <div class="main">
+        <h1><span>Bize Ulaşın</span></h1>
+
+        <div class="contact-form">
+            <!-- İletişim formu -->
+              <form onsubmit="return showAlert()">
+                <label for="name">Adınız Soyadınız:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-posta Adresiniz:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mesajınız:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" id="gönder1">Gönder</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function showAlert() {
+            alert("Bilgileriniz alınmıştır. Teşekkürler!");
+            return false; 
+        }
+    </script>
+</body>
+
+</html>

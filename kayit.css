@@ -1,0 +1,85 @@
+/* Genel body stil ayarları. Roboto fontu kullanılarak, sayfa ortalanmış ve arka plan rengi belirlenmiş. */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Ana konteyner stil ayarları. Arka plan rengi, kenar yuvarlakları ve gölge efekti. */
+.ana-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+/* Kayıt formu konteyneri için padding ve başlık stili. */
+.kayit-container {
+    padding: 70px;
+}
+
+h2 {
+    padding-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+/* Form elemanlarının düzeni için flexbox kullanımı. */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Etiketler için stil ayarları. */
+label {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Input alanları için stil ayarları. Padding, kenarlık ve kutu modeli. */
+input {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Buton için arka plan rengi, yazı rengi ve kenarlık ayarları. */
+button {
+    background-color: rgb(179, 19, 18);
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Butonun üzerine gelindiğinde arka plan renginin değişimi. */
+button:hover {
+    background-color: rgb(204, 58, 58);
+}
+
+/* Banner için stil ayarları. Pozisyon, boyut ve z-index. */
+.banner{
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+/* 'selam' ID'sine sahip öğe için margin sol ayarı. */
+#selam {
+    margin-left: 20px;
+}

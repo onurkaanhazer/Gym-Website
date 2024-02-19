@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        /* Stilleri tanımlama */
+        h1 {
+            color: #ddd;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(22, 22, 26, 0.658);
+        }
+
+        .banner {
+            position: fixed; /* Videonun tam ekran yapısı */
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Arka plana alır */
+            background-color: rgba(22, 22, 26, 0.658);
+        }
+
+        .container {
+            z-index: 1; /* Videonun üzerinde gösterilir */
+            width: 300px;
+            padding: 40px;
+            padding-left: 25px;
+            background-color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        /* Form ve buton stilleri */
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        button, .back-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #e63946; /* Buton rengi */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px; 
+            margin-left: 10px;
+        }
+        button:hover, .back-button:hover {
+            background: #0056b3; /* Buton hover rengi */
+        }
+        #result {
+            font-size: 20px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <!-- Video arka plan -->
+        <video id="videobg" autoplay muted loop style="background-color: rgba(22, 22, 26, 0.658);">
+            <source src="vid.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="container">
+        <!-- BMI hesaplayıcı başlık -->
+        <h1>BMI Hesaplayıcı</h1>
+        <!-- BMI hesaplama formu -->
+        <form id="bmiForm">
+            <label for="height" style="color:rgb(255, 255, 255);">Boy (cm):</label>
+            <input type="number" id="height" required>
+            <label for="weight" style="color:rgb(255, 255, 255);">Kilo (kg):</label>
+            <input type="number" id="weight" required>
+            <button type="submit">Hesapla</button>
+        </form>
+        <!-- BMI sonucu gösterilecek alan -->
+        <div id="result"></div>
+        <!-- Ana menüye dön butonu -->
+        <button class="back-button" onclick="window.location.href='index.html';">Ana Menüye Dön</button>
+    </div>
+
+    <script>
+        // BMI hesaplama ve sonucun gösterimi
+        document.getElementById('bmiForm').addEventListener('submit', function(e) {
+            var height = document.getElementById('height').value / 100; // metre cinsinden boy
+            var weight = document.getElementById('weight').value; // kilogram cinsinden kilo
+            var bmi = weight / (height * height); // BMI hesaplama
+            var resultText = "BMI: " + bmi.toFixed(2);
+    
+            // BMI değerine göre durum belirleme ve uyarı
+            if (bmi < 18.5) {
+                alert(resultText + " - Zayıf");
+            } else if (bmi >= 18.5 && bmi <= 24.9) {
+                alert(resultText + " - İyi");
+            } else {
+                alert(resultText + " - BİLGİSAYARI BIRAK VE SPOR YAP KiloluSUN");
+            }
+    
+            document.getElementById('result').innerText = resultText;
+        });
+    </script>
+    
+</body>
+</html>

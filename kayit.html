@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spor Salonu Kayıt Ekranı</title>
+    <link rel="stylesheet" href="kayit.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="ana-container">
+    <div class="kayit-container">
+        <h2>YBS SPOR KAYIT</h2>
+        <form onsubmit="return showAlert()">
+            <label for="kullaniciAdi">Kullanıcı Adı:</label>
+            <input type="text" id="kullaniciAdi" name="kullaniciAdi" required>
+
+            <label for="eposta">E-posta:</label>
+            <input type="email" id="eposta" name="eposta" required>
+
+            <label for="sifre">Şifre:</label>
+            <input type="password" id="sifre" name="sifre" required>
+
+            <label for="sifreTekrar">Şifre Tekrar:</label>
+            <input type="password" id="sifreTekrar" name="sifreTekrar" required>
+
+            <button type="submit">Kayıt Ol</button>
+           <a id="selam" href="index.html"><button type="button">Ana Sayfaya Dön</button></a>
+        </form>
+    </div>
+</div>
+
+<video class="banner" autoplay loop muted style="background-color: rgba(22, 22, 26, 0.658);">
+    <source src="vid.mp4" type="video/mp4">
+</video>
+<script type="text/javascript">
+        function showAlert() {
+            alert("KAYIT OLDUNUZ");
+            return false; 
+        }
+
+</script>
+
+</body>
+</html>

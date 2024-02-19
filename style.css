@@ -1,0 +1,170 @@
+/* Google Fonts üzerinden Roboto fontunu içe aktarma */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* Tüm HTML elemanları için temel sıfırlama ve font ayarları */
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Banner bölümü için stil ayarları */
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  background-color: rgba(22, 22, 26, 0.658);
+}
+
+/* Banner içindeki video için stil ayarları */
+.banner video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+/* Banner içindeki içerik için pozisyon ve z-index ayarları */
+.banner .content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+/* Üst navigasyon çubuğu için flexbox stil ayarları */
+.banner .content .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 11vh;
+    background-color: rgb(27, 38, 44, 0.5);
+    margin: auto;
+    align-items: center;
+}
+
+/* Logo bölümü için stil ayarları */
+.logo {
+    width: 30%;
+    text-align: center;
+    margin: auto;
+}
+
+/* Logo metni için stil ayarları */
+.logo h1 {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+/* Logo içindeki özel renkli metin için stil ayarları */
+.logo h1 span {
+    color: rgb(179, 19, 18);
+}
+
+/* Navigasyon öğeleri için stil ayarları */
+.nav-items {
+    width: 45%;
+    text-align: center;
+    margin: auto;
+}
+
+/* Navigasyon listesi için flexbox stil ayarları */
+.nav-items ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* Navigasyon listesi öğeleri için stil ayarları */
+.nav-items ul li {
+    list-style: none;
+    display: inline-block;
+    height: 20px;
+    width: auto;
+    padding: 12px 20px;
+}
+
+/* Navigasyon bağlantıları için stil ayarları */
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+/* Navigasyon bağlantılarının hover ve aktif durumları için stil ayarları */
+li .active, a:hover {
+    color: rgb(187, 225, 250);
+}
+
+/* 'Kayıt Ol' butonu için özel stil ayarları */
+ul #sign {
+    background-color: rgb(179, 19, 18);
+}
+
+/* 'Kayıt Ol' butonunun hover durumu için stil ayarları */
+ul #sign:hover {
+    background: transparent;
+    border: 1.2px solid rgb(50, 130, 184);
+    padding: 11px 19px;
+}
+
+/* Ana içerik bölümü için stil ayarları */
+.main {
+    align-items: center;
+    text-align: center;
+    margin-top: 25vh;
+    color: white;
+}
+
+/* Ana başlık için stil ayarları */
+.main h3 {
+    font-size: 20px;
+}
+
+/* Ana başlık metni için stil ayarları */
+.main h1 {
+    font-size: 80px;
+    padding: 25px 0px;
+    font-weight: bold;
+}
+
+/* Ana başlık içindeki özel renkli metin için stil ayarları */
+.main h1 span {
+    color: rgb(179, 19, 18);
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Butonlar için genel stil ayarları */
+button {
+    padding: 15px 20px;
+    background: rgb(179, 19, 18);
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration: none;
+}
+
+/* Butonların hover durumu için stil ayarları */
+button:hover {
+    background: transparent;
+    border: 1.5px solid rgb(252, 50, 0);
+    color: rgb(252, 50, 0);
+    text-decoration: underline;
+    text-decoration: none;
+}
+
+/* 'but' ID'sine sahip öğe için stil ayarları */
+#but {
+    color: inherit;
+    text-decoration: none;
+}
